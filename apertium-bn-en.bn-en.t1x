@@ -15,6 +15,12 @@
     <def-cat n="vblex">
       <cat-item tags="vblex.*"/>
     </def-cat>
+    <!-- Present continuous, past continuous, future continuous -->
+    <def-cat n="cnt">
+      <cat-item tags="vblex.pres.cnt.*"/>
+      <cat-item tags="vblex.past.cnt.*"/>
+      <cat-item tags="vblex.ft.cnt.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
@@ -37,8 +43,43 @@
     </def-attr>
     <def-attr n="temps">
       <attr-item tags="pres"/>
+      <attr-item tags="pres.smpl"/>
+      <attr-item tags="pres.cnt"/>
       <attr-item tags="past"/>
+      <attr-item tags="past.smpl"/>
+      <attr-item tags="past.cnt"/>  
+      <attr-item tags="ft"/>
+      <attr-item tags="ft.smpl"/>
+      <attr-item tags="ft.cnt"/> 
+      <attr-item tags="prft"/>     
+      <attr-item tags="plprft"/>     
+      <attr-item tags="ger"/>  
       <attr-item tags="inf"/>
+      <!-- present indefinite? -->
+      <attr-item tags="pri"/>
+      <!-- past participle? -->
+      <attr-item tags="pp"/>
+      <attr-item tags="TD"/>
+    </def-attr>
+    <def-attr n="temps_vbser">
+      <attr-item tags="pres"/>
+      <attr-item tags="past"/>
+      <attr-item tags="ft"/>
+      <attr-item tags="prft"/>     
+      <attr-item tags="plprft"/>     
+      <attr-item tags="ger"/>  
+      <attr-item tags="inf"/>
+      <!-- present indefinite? -->
+      <attr-item tags="pri"/>
+      <!-- past participle? -->
+      <attr-item tags="pp"/>
+      <attr-item tags="TD"/>
+    </def-attr>
+    <def-attr n="pers">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+      <attr-item tags="impers"/>
     </def-attr>
   </section-def-attrs>
 
@@ -76,7 +117,38 @@
       </action>
     </rule>
 
-
+    <!-- Change all pres/past/ft continuous to gerund -->
+    <rule comment="VBLEX: CONT">
+      <pattern>
+        <pattern-item n="cnt"/>
+      </pattern>
+      <action>
+        
+        <out>
+          <chunk name="verb_cnt" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="VBCNT"/></tag>
+            </tags>
+            
+            <lu>
+              <lit v="be"/>
+              <lit-tag v="vbser"/>
+              <clip pos="1" side="tl" part="temps_vbser"/>
+              <!-- We need to output person and number only when: (person = p1 OR p3) AND number = sg -->
+              
+            </lu>
+            
+            <b/>
+            
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="vblex"/>
+              <lit-tag v="ger"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
   </section-rules>
 </transfer>
