@@ -97,6 +97,8 @@
     <def-attr n="prfct">
       <attr-item tags="prft"/>
       <attr-item tags="ppst"/>
+      <attr-item tags="past"/>
+      <attr-item tags="pres"/>
     </def-attr>
   </section-def-attrs>
 
