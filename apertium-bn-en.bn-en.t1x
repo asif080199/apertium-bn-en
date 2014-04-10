@@ -15,11 +15,13 @@
     <def-cat n="vblex">
       <cat-item tags="vblex.*"/>
     </def-cat>
+    <!-- Present simple, past simple, future simple -->
+    <def-cat n="simple">
+      <cat-item tags="vblex.*.smpl.*"/>
+    </def-cat>
     <!-- Present continuous, past continuous, future continuous -->
     <def-cat n="cnt">
-      <cat-item tags="vblex.pres.cnt.*"/>
-      <cat-item tags="vblex.past.cnt.*"/>
-      <cat-item tags="vblex.ft.cnt.*"/>
+      <cat-item tags="vblex.*.cnt.*"/>
     </def-cat>
   </section-def-cats>
 
@@ -116,6 +118,28 @@
         </out>
       </action>
     </rule>
+    
+    <!-- Change all pres/past/ft simple to pres/past/ft -->
+    <rule comment="VBLEX: SIMPLE">
+      <pattern>
+        <pattern-item n="simple"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="verb_simple" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="VBSMPL"/></tag>
+            </tags>
+            
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="vblex"/>
+              <clip pos="1" side="tl" part="temps_vbser"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <!-- Change all pres/past/ft continuous to gerund -->
     <rule comment="VBLEX: CONT">
@@ -123,7 +147,6 @@
         <pattern-item n="cnt"/>
       </pattern>
       <action>
-        
         <out>
           <chunk name="verb_cnt" case="caseFirstWord">
             <tags>
@@ -135,7 +158,32 @@
               <lit-tag v="vbser"/>
               <clip pos="1" side="tl" part="temps_vbser"/>
               <!-- We need to output person and number only when: (person = p1 OR p3) AND number = sg -->
-              
+              <!--
+              <choose>
+                <when>
+                  <test>
+                    <or>
+                      <equal>
+                        <clip pos="1" side="tl" part="pers"/>
+                        <lit-tag v="p1"/>
+                      </equal>
+                      <equal>
+                        <clip pos="1" side="tl" part="pers"/>
+                        <lit-tag v="p3"/>
+                      </equal>
+                    </or>
+                  </test>
+                  <let>
+                    <clip pos="1" side="tl" part="pers"/>
+              -->
+                    <!-- <clip pos="1" side="tl" part="nbr"/> -->
+                    <!-- TODO: number (sg, pl) information should be taken from the subject -->
+              <!--
+                    <lit-tag v="sg"/>
+                  </let>
+                </when>
+              </choose>
+              -->
             </lu>
             
             <b/>
