@@ -17,11 +17,22 @@
     </def-cat>
     <!-- Present simple, past simple, future simple -->
     <def-cat n="simple">
-      <cat-item tags="vblex.*.smpl.*"/>
+      <cat-item tags="vblex.pres.smpl.*"/>
+      <cat-item tags="vblex.past.smpl.*"/>
+      <cat-item tags="vblex.ft.smpl.*"/>
     </def-cat>
     <!-- Present continuous, past continuous, future continuous -->
     <def-cat n="cnt">
-      <cat-item tags="vblex.*.cnt.*"/>
+      <cat-item tags="vblex.pres.cnt.*"/>
+      <cat-item tags="vblex.past.cnt.*"/>
+      <cat-item tags="vblex.ft.cnt.*"/>
+    </def-cat>
+    <!-- Present perfect, past perfect -->
+    <def-cat n="perfect">
+      <cat-item tags="vblex.prft"/>
+      <cat-item tags="vblex.prft.*"/>
+      <cat-item tags="vblex.ppst"/>
+      <cat-item tags="vblex.ppst.*"/>
     </def-cat>
   </section-def-cats>
 
@@ -82,6 +93,10 @@
       <attr-item tags="p2"/>
       <attr-item tags="p3"/>
       <attr-item tags="impers"/>
+    </def-attr>
+    <def-attr n="prfct">
+      <attr-item tags="prft"/>
+      <attr-item tags="ppst"/>
     </def-attr>
   </section-def-attrs>
 
@@ -192,6 +207,63 @@
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="vblex"/>
               <lit-tag v="ger"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
+    <!-- Change all pres/past perfect to pp -->
+    <rule comment="VBLEX: PERFECT">
+      <pattern>
+        <pattern-item n="perfect"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test>
+              <equal>
+                <clip pos="1" side="sl" part="prfct"/>
+                <lit-tag v="prft"/>
+              </equal>
+            </test>
+            <let>
+              <clip pos="1" side="tl" part="prfct"/>
+              <lit-tag v="pres"/>
+            </let>
+          </when>
+          <when>
+            <test>
+              <equal>
+                <clip pos="1" side="sl" part="prfct"/>
+                <lit-tag v="ppst"/>
+              </equal>
+            </test>
+            <let>
+              <clip pos="1" side="tl" part="prfct"/>
+              <lit-tag v="past"/>
+            </let>
+          </when>
+        </choose>
+        
+        <out>
+          <chunk name="verb_perfect" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="VBPERFECT"/></tag>
+            </tags>
+            
+            <lu>
+              <lit v="have"/>
+              <lit-tag v="vbhaver"/>
+              <clip pos="1" side="tl" part="prfct"/>
+            </lu>
+            
+            <b/>
+            
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="vblex"/>
+              <lit-tag v="pp"/>
             </lu>
           </chunk>
         </out>
