@@ -106,6 +106,7 @@
     <def-var n="number"/>
     <def-var n="case"/>
     <def-var n="genere"/>
+    <def-var n="person-number"/>
   </section-def-vars>
 
   <section-rules>
@@ -164,6 +165,40 @@
         <pattern-item n="cnt"/>
       </pattern>
       <action>
+      
+        <!-- We need to output person and number only when: (person = p1 OR p3) AND number = sg -->
+        <choose>
+          <when>
+            <test>
+              <or>
+                <equal>
+                  <clip pos="1" side="tl" part="pers"/>
+                  <lit-tag v="p1"/>
+                </equal>
+                <equal>
+                  <clip pos="1" side="tl" part="pers"/>
+                  <lit-tag v="p3"/>
+                </equal>
+              </or>
+            </test>
+            <!-- TODO: number (sg, pl) information should be taken from the subject -->
+            <let>
+              <var n="person-number"/>
+              <concat>
+                <clip pos="1" side="tl" part="pers"/>
+                <!-- <clip pos="1" side="tl" part="nbr"/> -->
+                <lit-tag v="sg"/>
+              </concat>
+            </let>
+          </when>
+          <otherwise>
+            <let>
+              <var n="person-number"/>
+              <lit v=""/>
+            </let>
+          </otherwise>
+        </choose>
+            
         <out>
           <chunk name="verb_cnt" case="caseFirstWord">
             <tags>
@@ -174,33 +209,6 @@
               <lit v="be"/>
               <lit-tag v="vbser"/>
               <clip pos="1" side="tl" part="temps_vbser"/>
-              <!-- We need to output person and number only when: (person = p1 OR p3) AND number = sg -->
-              <!--
-              <choose>
-                <when>
-                  <test>
-                    <or>
-                      <equal>
-                        <clip pos="1" side="tl" part="pers"/>
-                        <lit-tag v="p1"/>
-                      </equal>
-                      <equal>
-                        <clip pos="1" side="tl" part="pers"/>
-                        <lit-tag v="p3"/>
-                      </equal>
-                    </or>
-                  </test>
-                  <let>
-                    <clip pos="1" side="tl" part="pers"/>
-              -->
-                    <!-- <clip pos="1" side="tl" part="nbr"/> -->
-                    <!-- TODO: number (sg, pl) information should be taken from the subject -->
-              <!--
-                    <lit-tag v="sg"/>
-                  </let>
-                </when>
-              </choose>
-              -->
             </lu>
             
             <b/>
@@ -209,6 +217,7 @@
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="vblex"/>
               <lit-tag v="ger"/>
+              <var n="person-number"/>
             </lu>
           </chunk>
         </out>
