@@ -34,6 +34,9 @@
       <cat-item tags="vblex.ppst"/>
       <cat-item tags="vblex.ppst.*"/>
     </def-cat>
+    <def-cat n="num">
+      <cat-item tags="num.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
@@ -100,6 +103,13 @@
       <attr-item tags="past"/>
       <attr-item tags="pres"/>
     </def-attr>
+    <def-attr n="anmt">
+      <attr-item tags="nn"/>
+      <attr-item tags="aa"/>
+      <attr-item tags="an"/>
+      <attr-item tags="hu"/>
+      <attr-item tags="al"/>
+    </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
@@ -144,9 +154,9 @@
       </pattern>
       <action>
         <out>
-          <chunk name="verb_simple" case="caseFirstWord">
+          <chunk name="verb" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="VBSMPL"/></tag>
+              <tag><lit-tag v="VB"/></tag>
             </tags>
             
             <lu>
@@ -200,9 +210,9 @@
         </choose>
             
         <out>
-          <chunk name="verb_cnt" case="caseFirstWord">
+          <chunk name="verb" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="VBCNT"/></tag>
+              <tag><lit-tag v="VB"/></tag>
             </tags>
             
             <lu>
@@ -258,9 +268,9 @@
         </choose>
         
         <out>
-          <chunk name="verb_perfect" case="caseFirstWord">
+          <chunk name="verb" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="VBPERFECT"/></tag>
+              <tag><lit-tag v="VB"/></tag>
             </tags>
             
             <lu>
@@ -275,6 +285,49 @@
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="vblex"/>
               <lit-tag v="pp"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
+    <!-- Delete animate/inanimate information from a number and add single/plural form -->
+    <rule comment="NUMBER">
+      <pattern>
+        <pattern-item n="num"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test>
+              <equal>
+                <clip pos="1" side="sl" part="lem"/>
+                <lit v="এক"/>
+              </equal>
+            </test>
+            <let>
+              <var n="number"/>
+              <lit-tag v="sg"/>
+            </let>
+          </when>
+          <otherwise>
+            <let>
+              <var n="number"/>
+              <lit-tag v="sp"/>
+            </let>
+          </otherwise>
+        </choose>
+        
+        <out>
+          <chunk name="numeral" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NUM"/></tag>
+            </tags>
+            
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="num"/>
+              <var n="number"/>
             </lu>
           </chunk>
         </out>

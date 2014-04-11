@@ -166,8 +166,10 @@
 
     
     <e><p><l>এই<s n="det"/><s n="dem"/></l><r>this<s n="det"/><s n="dem"/><s n="sg"/></r></p></e>
+    <!-- TODO: Singular/Plural form need to be determined using transfer rules -->
+    <e><p><l>সেই<s n="det"/><s n="dem"/></l><r>that<s n="det"/><s n="dem"/><s n="sg"/></r></p></e>
     <e><p><l>কি<s n="det"/><s n="itg"/><s n="sp"/></l><r>what<s n="det"/><s n="itg"/><s n="sp"/></r></p></e>
-    <e><p><l>এক<s n="num"/></l><r>a<s n="det"/><s n="ind"/><s n="sg"/></r></p></e>
+    <e><p><l>এক<s n="num"/><s n="sg"/></l><r>a<s n="det"/><s n="ind"/><s n="sg"/></r></p></e>
     
     <e><p><l>সকল<s n="prn"/><s n="p3"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>all<s n="predet"/><s n="sp"/></r></p></e>
 
@@ -811,6 +813,7 @@
     <e><p><l>শেষ<s n="n"/><s n="mf"/><s n="nn"/></l><r>past<s n="n"/></r></p></e>
     <e><p><l>পেটেন্ট<s n="n"/><s n="nt"/><s n="nn"/></l><r>patent<s n="n"/></r></p></e>
     <e><p><l>রাস্তা<s n="n"/><s n="nt"/><s n="nn"/></l><r>path<s n="n"/></r></p></e>
+    <e><p><l>গলি<s n="n"/><s n="nt"/><s n="nn"/></l><r>lane<s n="n"/></r></p></e>
     <e><p><l>পৃষ্ঠপোষকতা<s n="n"/><s n="nt"/><s n="nn"/></l><r>patronage<s n="n"/></r></p></e>
     <e><p><l>নকশা<s n="n"/><s n="nt"/><s n="nn"/></l><r>pattern<s n="n"/></r></p></e>
     <e><p><l>শান্তি<s n="n"/><s n="mf"/><s n="nn"/></l><r>peace<s n="n"/></r></p></e>
@@ -1782,6 +1785,7 @@
     <e><p><l>বদলানো<s n="n"/><s n="mf"/><s n="nn"/></l><r>changing<s n="n"/></r></p></e>
     <e><p><l>অন্ধ<s n="n"/><s n="nt"/><s n="nn"/></l><r>blind<s n="n"/></r></p></e>
     <e><p><l>থানা<s n="n"/><s n="mf"/><s n="nn"/></l><r>police<b/>station<s n="n"/></r></p></e>
+    <e><p><l>জেলখানা<s n="n"/><s n="mf"/><s n="nn"/></l><r>prison<s n="n"/></r></p></e>
     <e><p><l>শুল্ক<s n="n"/><s n="mf"/><s n="nn"/></l><r>tax<s n="n"/></r></p></e>
     <e><p><l>দেব<s n="n"/><s n="mf"/><s n="el"/></l><r>god<s n="n"/></r></p></e>
     <e><p><l>সেতু<s n="n"/><s n="mf"/><s n="nn"/></l><r>bridge<s n="n"/></r></p></e>
@@ -4505,6 +4509,7 @@
     <e><p><l>স্থগিত<s n="adj"/><s n="mf"/></l><r>postponed<s n="adj"/></r></p></e>
     <e><p><l>১০ম<s n="adj"/><s n="mf"/></l><r>tenth<s n="adj"/></r></p></e>
     <e><p><l>হালকা<s n="adj"/><s n="mf"/></l><r>light<s n="adj"/><s n="sint"/></r></p></e>
+    <e><p><l>ভারি<s n="adj"/><s n="mf"/></l><r>heavy<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>নিষ্ক্রিয়<s n="adj"/><s n="mf"/></l><r>inactive<s n="adj"/></r></p></e>
     <e><p><l>ডেপুটি<s n="adj"/><s n="mf"/></l><r>deputy<s n="adj"/></r></p></e>
     <e><p><l>নিয়মিত<s n="adj"/><s n="mf"/></l><r>regular<s n="adj"/></r></p></e>
@@ -5055,6 +5060,7 @@
     <e><p><l>নিহত<s n="adj"/><s n="mf"/></l><r>dead<s n="adj"/></r></p></e>
     <e><p><l>আগাম<s n="adj"/><s n="mf"/></l><r>advance<s n="adj"/></r></p></e>
     <e><p><l>প্রতিভাবান<s n="adj"/><s n="mf"/></l><r>talented<s n="adj"/></r></p></e>
+    <e><p><l>বিত্তবান<s n="adj"/><s n="sint"/><s n="mf"/></l><r>rich<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>অক্ষম<s n="adj"/><s n="mf"/></l><r>unable<s n="adj"/></r></p></e>
     <e><p><l>প্রদত্ত<s n="adj"/><s n="mf"/></l><r>given<s n="adj"/></r></p></e>
     <e><p><l>বাতিল<s n="adj"/><s n="mf"/></l><r>rejected<s n="adj"/></r></p></e>
@@ -7657,6 +7663,7 @@
     <e><p><l>আট<s n="num"/></l><r>eight<s n="num"/><s n="sp"/></r></p></e>
     <e><p><l>নয়<s n="num"/></l><r>nine<s n="num"/><s n="sp"/></r></p></e>
     <e><p><l>দশ<s n="num"/></l><r>ten<s n="num"/><s n="sp"/></r></p></e>
+    <e><p><l>দু<s n="num"/></l><r>two<s n="num"/><s n="sp"/></r></p></e>
 
     <!-- Postpositions -->
     <e><p><l>থেকে<s n="post"/></l><r>since<s n="pr"/></r></p></e>
