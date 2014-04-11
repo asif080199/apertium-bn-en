@@ -1102,6 +1102,14 @@
         </p>
       </e>
 
+      
+                              <e i="" r="RL">
+        <p>
+          <l/>
+          <r><s n="adv"/></r>
+        </p>
+      </e>
+
     </pardef>
 
 
@@ -30905,7 +30913,8 @@
                         <e lm="fence" i=""><i>fence</i><par n="house__n"/></e>
 
                         <e lm="wire fence" i=""><i>wire<b/>fence</i><par n="house__n"/></e>
-
+                        
+                        <e lm="barbed wire" i=""><i>barbed<b/>wire</i><par n="house__n"/></e>
 
                         <e lm="shock" i=""><i>shock</i><par n="house__n"/></e>
 

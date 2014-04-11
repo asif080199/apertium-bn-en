@@ -3407,6 +3407,7 @@
     <e><p><l>পঞ্চমাংশ<s n="n"/><s n="nt"/><s n="nn"/></l><r>one-fifth<s n="n"/></r></p></e>
     <e><p><l>নন্দন<s n="n"/><s n="nt"/><s n="nn"/></l><r>eden<s n="n"/></r></p></e>
     <e><p><l>দারিদ্র<s n="n"/><s n="nt"/><s n="nn"/></l><r>poverty<s n="n"/></r></p></e>
+    <e><p><l>কাঁটাতার<s n="n"/><s n="nt"/><s n="nn"/></l><r>barbed<b/>wire<s n="n"/></r></p></e>
     <e><p><l>টাইটেল<s n="n"/><s n="nt"/><s n="nn"/></l><r>title<s n="n"/></r></p></e>
     <e><p><l>জার্নাল<s n="n"/><s n="nt"/><s n="nn"/></l><r>journal<s n="n"/></r></p></e>
     <e><p><l>চিফ<s n="n"/><s n="mf"/><s n="hu"/></l><r>chief<s n="n"/></r></p></e>
@@ -4316,6 +4317,7 @@
     <e><p><l>জোরদার<s n="adj"/><s n="mf"/></l><r>fortified<s n="adj"/></r></p></e>
     <e><p><l>গায়েব<s n="adj"/><s n="mf"/></l><r>vanished<s n="adj"/></r></p></e>
     <e><p><l>শক্ত<s n="adj"/><s n="mf"/></l><r>hard<s n="adj"/><s n="sint"/></r></p></e>
+    <e><p><l>নিরেট<s n="adj"/><s n="mf"/></l><r>solid<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>গর্ভবতী<s n="adj"/><s n="f"/></l><r>pregnant<s n="adj"/></r></p></e>
     <e><p><l>পূর্ব<s n="adj"/><s n="mf"/></l><r>east<s n="adj"/></r></p></e>
     <e><p><l>পূর্ণ<s n="adj"/><s n="sint"/><s n="mf"/></l><r>filled<s n="adj"/></r></p></e>
