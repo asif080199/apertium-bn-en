@@ -127,6 +127,8 @@
     <def-var n="case"/>
     <def-var n="genere"/>
     <def-var n="person-number"/>
+    <def-var n="be"/>
+    <def-var n="be-person-number"/>
   </section-def-vars>
 
   <section-rules>
@@ -218,6 +220,50 @@
             </let>
           </otherwise>
         </choose>
+        
+        <!-- We have to output a 'be' verb (auxilary verb), but only when the vblex isn't itslef 'be' -->
+        <!-- Also, for a be<vblex>, we might need person-number information -->
+        <choose>
+          <when>
+            <test>
+              <not>
+                <equal>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <lit v="be"/>
+                </equal>
+              </not>
+            </test>
+            <let>
+              <var n="be"/>
+              <concat>
+                <lu>
+                  <lit v="be"/>
+                  <lit-tag v="vbser"/>
+                  <clip pos="1" side="tl" part="a_temps_vbser"/>
+                  <var n="person-number"/>
+                </lu>
+                
+                <b/>
+              </concat>
+            </let>
+            <let>
+              <var n="be-person-number"/>
+              <lit v=""/>
+            </let>
+          </when>
+          
+          <!-- For be<vblex> -->
+          <otherwise>
+            <let>
+              <var n="be"/>
+              <lit v=""/>
+            </let>
+            <let>
+              <var n="be-person-number"/>
+              <var n="person-number"/>
+            </let>
+          </otherwise>
+        </choose>
             
         <out>
           <chunk name="verb" case="caseFirstWord">
@@ -225,19 +271,13 @@
               <tag><lit-tag v="VB"/></tag>
             </tags>
             
-            <lu>
-              <lit v="be"/>
-              <lit-tag v="vbser"/>
-              <var n="person-number"/>
-              <clip pos="1" side="tl" part="a_temps_vbser"/>
-            </lu>
-            
-            <b/>
+            <var n="be"/>
             
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="vblex"/>
               <lit-tag v="ger"/>
+              <var n="be-person-number"/>
             </lu>
           </chunk>
         </out>
