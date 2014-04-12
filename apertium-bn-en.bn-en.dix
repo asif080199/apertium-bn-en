@@ -110,7 +110,7 @@
            be good to treat reflexive and possessive pronouns similarly in English. -->
 
     <e><p><l>prpers<s n="prn"/><s n="p1"/><s n="aa"/><s n="mf"/><s n="sg"/><s n="nom"/></l><r>prpers<s n="prn"/><s n="subj"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
-    <e r="LR"><p><l>prpers<s n="prn"/><s n="p1"/><s n="aa"/><s n="mf"/><s n="sg"/><s n="gen"/></l><r>my<s n="prn"/><s n="p1"/><s n="aa"/><s n="mf"/><s n="sg"/><s n="gen"/></r></p></e>
+    <e r="LR"><p><l>prpers<s n="prn"/><s n="p1"/><s n="aa"/><s n="mf"/><s n="sg"/><s n="gen"/></l><r>prpers<s n="prn"/><s n="obj"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
     <e><p><l>prpers<s n="prn"/><s n="p1"/><s n="aa"/><s n="mf"/><s n="sg"/><s n="obj"/></l><r>prpers<s n="prn"/><s n="obj"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
     <e><p><l>prpers<s n="prn"/><s n="p1"/><s n="aa"/><s n="mf"/><s n="sg"/><s n="pos"/></l><r>mine<s n="prn"/><s n="pos"/><s n="mf"/><s n="sp"/></r></p></e>
     <e><p><l>নিজে<s n="prn"/><s n="ref"/><s n="aa"/><s n="mf"/><s n="sg"/></l><r>myself<s n="prn"/><s n="ref"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
@@ -170,6 +170,13 @@
     <e><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="gen" /></l><r>her<s n="det"/><s n="pos"/><s n="sp"/></r></p></e>
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="an" /><s n="mf" /><s n="sg" /><s n="nom" /></l><r>this<s n="prn"/><s n="tn"/><s n="mf"/><s n="sg"/></r></p></e>
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="an" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>these<s n="prn"/><s n="tn"/><s n="mf"/><s n="pl"/></r></p></e>
+    <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
+    <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
+    <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
+    <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="obj" /></l><r>prpers<s n="prn"/><s n="obj"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
+    <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="pl" /><s n="obj" /></l><r>prpers<s n="prn"/><s n="obj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
+    
+    
 
     
     <e><p><l>এই<s n="det"/><s n="dem"/></l><r>this<s n="det"/><s n="dem"/><s n="sg"/></r></p></e>
@@ -179,6 +186,7 @@
     <e><p><l>এক<s n="num"/><s n="sg"/></l><r>a<s n="det"/><s n="ind"/><s n="sg"/></r></p></e>
     
     <e><p><l>সকল<s n="prn"/><s n="p3"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>all<s n="predet"/><s n="sp"/></r></p></e>
+    <e><p><l>সবাই<s n="prn"/><s n="p3"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>all<s n="prn"/><s n="tn"/><s n="mf"/><s n="sp"/></r></p></e>
     <e><p><l>কেউ<s n="prn"/><s n="p3"/><s n="aa"/><s n="mf"/><s n="sp"/><s n="nom"/></l><r>someone<s n="prn"/><s n="tn"/><s n="m"/><s n="sg"/></r></p></e>
 
     <!-- Nouns -->
@@ -1000,6 +1008,7 @@
     <e><p><l>টুকরা<s n="n"/><s n="nt"/><s n="nn"/></l><r>sheet<s n="n"/></r></p></e>
     <e><p><l>বাসস্থান<s n="n"/><s n="nt"/><s n="nn"/></l><r>shelter<s n="n"/></r></p></e>
     <e><p><l>ধাক্কা<s n="n"/><s n="nt"/><s n="nn"/></l><r>shock<s n="n"/></r></p></e>
+    <e><p><l>ধাক্কাধাক্কি<s n="n"/><s n="nt"/><s n="nn"/></l><r>push<s n="n"/></r></p></e>
     <e><p><l>কেনাকাটা<s n="n"/><s n="nt"/><s n="nn"/></l><r>shopping<s n="n"/></r></p></e>
     <e><p><l>দোকান<s n="n"/><s n="nt"/><s n="nn"/></l><r>shop<s n="n"/></r></p></e>
     <e><p><l>ঘাটতি<s n="n"/><s n="nt"/><s n="nn"/></l><r>shortage<s n="n"/></r></p></e>
@@ -3660,6 +3669,8 @@
     <e><p><l>আছ<s n="vblex"/><s n="plprft"/></l><r>be<s n="vbser"/><s n="past"/><s n="p3"/><s n="sg"/></r></p></e>
     <e><p><l>আছ<s n="vblex"/><s n="plprft"/></l><r>be<s n="vbser"/><s n="past"/></r></p></e>
     <e><p><l>পড়<s n="vblex"/></l><r>read<s n="vblex"/></r></p></e>
+    <e><p><l>নে<s n="vblex"/></l><r>take<s n="vblex"/></r></p></e>
+    <e><p><l>লাগ<s n="vblex"/></l><r>start<s n="vblex"/></r></p></e>
     <e><p><l>ত্যাগ কর<s n="vblex"/></l><r>abandon<s n="vblex"/></r></p></e>
     <e><p><l>অপহরণ কর<s n="vblex"/></l><r>abduct<s n="vblex"/></r></p></e>
     <e><p><l>শপথ করে ত্যাগ কর<s n="vblex"/></l><r>abjure<s n="vblex"/></r></p></e>
