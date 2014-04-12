@@ -10,7 +10,7 @@
       <cat-item tags="adj.*"/>
     </def-cat>
     <def-cat n="genitive">
-      <cat-item tags="gen"/>
+      <cat-item tags="a_gen"/>
     </def-cat>
     <def-cat n="vblex">
       <cat-item tags="vblex.*"/>
@@ -37,6 +37,12 @@
     <def-cat n="num">
       <cat-item tags="num.*"/>
     </def-cat>
+    <def-cat n="inf">
+      <cat-item tags="vblex.gen"/>
+      <cat-item tags="vblex.gen.*"/>
+      <cat-item tags="vblex.inf"/>
+      <cat-item tags="vblex.inf.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
@@ -44,20 +50,20 @@
       <attr-item tags="n"/>
       <attr-item tags="np"/>
     </def-attr>
-    <def-attr n="gen">
+    <def-attr n="a_gen">
       <attr-item tags="m"/>
       <attr-item tags="f"/>
       <attr-item tags="nt"/>
       <attr-item tags="mf"/>
       <attr-item tags="GD"/>
     </def-attr>
-    <def-attr n="nbr">
+    <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
-    <def-attr n="temps">
+    <def-attr n="a_temps">
       <attr-item tags="pres"/>
       <attr-item tags="pres.smpl"/>
       <attr-item tags="pres.cnt"/>
@@ -77,7 +83,7 @@
       <attr-item tags="pp"/>
       <attr-item tags="TD"/>
     </def-attr>
-    <def-attr n="temps_vbser">
+    <def-attr n="a_temps_vbser">
       <attr-item tags="pres"/>
       <attr-item tags="past"/>
       <attr-item tags="ft"/>
@@ -91,19 +97,19 @@
       <attr-item tags="pp"/>
       <attr-item tags="TD"/>
     </def-attr>
-    <def-attr n="pers">
+    <def-attr n="a_pers">
       <attr-item tags="p1"/>
       <attr-item tags="p2"/>
       <attr-item tags="p3"/>
       <attr-item tags="impers"/>
     </def-attr>
-    <def-attr n="prfct">
+    <def-attr n="a_prfct">
       <attr-item tags="prft"/>
       <attr-item tags="ppst"/>
       <attr-item tags="past"/>
       <attr-item tags="pres"/>
     </def-attr>
-    <def-attr n="anmt">
+    <def-attr n="a_anmt">
       <attr-item tags="nn"/>
       <attr-item tags="aa"/>
       <attr-item tags="an"/>
@@ -132,14 +138,14 @@
           <chunk name="nom" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><clip pos="1" side="tl" part="gen"/></tag>
-              <tag><clip pos="1" side="tl" part="nbr"/></tag>
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
               <tag><lit-tag v="nom"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
               <clip pos="1" side="tl" part="a_nom"/>
-              <clip pos="1" side="tl" part="nbr" link-to="2"/>
+              <clip pos="1" side="tl" part="a_nbr" link-to="2"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
@@ -162,7 +168,7 @@
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="vblex"/>
-              <clip pos="1" side="tl" part="temps_vbser"/>
+              <clip pos="1" side="tl" part="a_temps_vbser"/>
             </lu>
           </chunk>
         </out>
@@ -182,11 +188,11 @@
             <test>
               <or>
                 <equal>
-                  <clip pos="1" side="tl" part="pers"/>
+                  <clip pos="1" side="tl" part="a_pers"/>
                   <lit-tag v="p1"/>
                 </equal>
                 <equal>
-                  <clip pos="1" side="tl" part="pers"/>
+                  <clip pos="1" side="tl" part="a_pers"/>
                   <lit-tag v="p3"/>
                 </equal>
               </or>
@@ -195,8 +201,8 @@
             <let>
               <var n="person-number"/>
               <concat>
-                <clip pos="1" side="tl" part="pers"/>
-                <!-- <clip pos="1" side="tl" part="nbr"/> -->
+                <clip pos="1" side="tl" part="a_pers"/>
+                <!-- <clip pos="1" side="tl" part="a_nbr"/> -->
                 <lit-tag v="sg"/>
               </concat>
             </let>
@@ -218,7 +224,7 @@
             <lu>
               <lit v="be"/>
               <lit-tag v="vbser"/>
-              <clip pos="1" side="tl" part="temps_vbser"/>
+              <clip pos="1" side="tl" part="a_temps_vbser"/>
             </lu>
             
             <b/>
@@ -244,24 +250,24 @@
           <when>
             <test>
               <equal>
-                <clip pos="1" side="sl" part="prfct"/>
+                <clip pos="1" side="sl" part="a_prfct"/>
                 <lit-tag v="prft"/>
               </equal>
             </test>
             <let>
-              <clip pos="1" side="tl" part="prfct"/>
+              <clip pos="1" side="tl" part="a_prfct"/>
               <lit-tag v="pres"/>
             </let>
           </when>
           <when>
             <test>
               <equal>
-                <clip pos="1" side="sl" part="prfct"/>
+                <clip pos="1" side="sl" part="a_prfct"/>
                 <lit-tag v="ppst"/>
               </equal>
             </test>
             <let>
-              <clip pos="1" side="tl" part="prfct"/>
+              <clip pos="1" side="tl" part="a_prfct"/>
               <lit-tag v="past"/>
             </let>
           </when>
@@ -276,7 +282,7 @@
             <lu>
               <lit v="have"/>
               <lit-tag v="vbhaver"/>
-              <clip pos="1" side="tl" part="prfct"/>
+              <clip pos="1" side="tl" part="a_prfct"/>
             </lu>
             
             <b/>
