@@ -15109,6 +15109,13 @@
       </e>
       <e>
         <p>
+          <l>যাবার</l>
+          <r>যা<s n="vblex" /><s n="gen" /></r>
+        </p>
+        <par n="enclitic" />
+      </e>
+      <e>
+        <p>
           <l>যেতে থাকবে</l>
           <r>যা<s n="vblex" /><s n="ft" /><s n="cnt" /><s n="impers" /></r>
         </p>
@@ -20723,6 +20730,13 @@
       <e>
         <p>
           <l>আসার</l>
+          <r>আস<s n="vblex" /><s n="gen" /></r>
+        </p>
+        <par n="enclitic" />
+      </e>
+      <e>
+        <p>
+          <l>আসবার</l>
           <r>আস<s n="vblex" /><s n="gen" /></r>
         </p>
         <par n="enclitic" />
@@ -34040,7 +34054,6 @@
     <e lm="মধ্যে"><i>মধ্যে</i><par n="এর__post" /></e>
     <e lm="বাদে"><i>বাদে</i><par n="এর__post" /></e>
     <e lm="এর"><i>এর</i><par n="এর__post" /></e>
-    <e lm="বাইরে"><i>বাইরে</i><par n="এর__post" /></e>
     <e lm="বাইরে"><i>বাইরে</i><par n="এর__post" /></e>
     <e lm="বরং"><i>বরং</i><par n="এর__post" /></e>
     <e lm="অতঃপর"><i>অতঃপর</i><par n="এর__post" /></e>

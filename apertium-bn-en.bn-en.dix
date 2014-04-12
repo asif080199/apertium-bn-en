@@ -172,6 +172,7 @@
     <e><p><l>এক<s n="num"/><s n="sg"/></l><r>a<s n="det"/><s n="ind"/><s n="sg"/></r></p></e>
     
     <e><p><l>সকল<s n="prn"/><s n="p3"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>all<s n="predet"/><s n="sp"/></r></p></e>
+    <e><p><l>কেউ<s n="prn"/><s n="p3"/><s n="aa"/><s n="mf"/><s n="sp"/><s n="nom"/></l><r>someone<s n="prn"/><s n="tn"/><s n="m"/><s n="sg"/></r></p></e>
 
     <!-- Nouns -->
                             <!-- TODO: Add gender on the Bengali side -->
@@ -3864,7 +3865,7 @@
     <e><p><l>উপভোগ কর<s n="vblex"/></l><r>enjoy<s n="vblex"/></r></p></e>
     <e><p><l>নিশ্চিতকরণ কর<s n="vblex"/></l><r>ensure<s n="vblex"/></r></p></e>
     <e><p><l>ঢোকা<s n="vblex"/></l><r>enter<s n="vblex"/></r></p></e>
-    <e><p><l>ঢোকা<s n="vblex"/></l><r>enter<s n="vblex"/></r></p></e>
+    <e><p><l>ঢুক<s n="vblex"/></l><r>enter<s n="vblex"/></r></p></e>
     <e><p><l>চিত্তবিনোদন কর<s n="vblex"/></l><r>entertain<s n="vblex"/></r></p></e>
     <e><p><l>মুছে ফেল<s n="vblex"/></l><r>erase<s n="vblex"/></r></p></e>
     <e><p><l>হিসাব কর<s n="vblex"/></l><r>estimate<s n="vblex"/></r></p></e>
@@ -5906,6 +5907,7 @@
     <e><p><l>বরং<s n="adv"/></l><r>rather<s n="adv"/></r></p></e>
     <e><p><l>বর্তমানে<s n="adv"/></l><r>now<s n="adv"/></r></p></e>
     <e><p><l>বাইরে<s n="adv"/></l><r>outside<s n="adv"/></r></p></e>
+    <e><p><l>ভেতরে<s n="adv"/></l><r>inside<s n="adv"/></r></p></e>
     <e><p><l>বাণিজ্যিকভাবে<s n="adv"/></l><r>commercially<s n="adv"/></r></p></e>
     <e><p><l>বারংবার<s n="adv"/></l><r>repeatedly<s n="adv"/></r></p></e>
     <e><p><l>বার্ষিক<s n="adv"/></l><r>annual<s n="adv"/></r></p></e>
