@@ -37,7 +37,7 @@
     <def-cat n="num">
       <cat-item tags="num.*"/>
     </def-cat>
-    <def-cat n="inf">
+    <def-cat n="infinitive">
       <cat-item tags="vblex.gen"/>
       <cat-item tags="vblex.gen.*"/>
       <cat-item tags="vblex.inf"/>
@@ -115,6 +115,10 @@
       <attr-item tags="an"/>
       <attr-item tags="hu"/>
       <attr-item tags="al"/>
+    </def-attr>
+    <def-attr n="a_inf">
+      <attr-item tags="inf"/>
+      <attr-item tags="gen"/>
     </def-attr>
   </section-def-attrs>
 
@@ -224,6 +228,7 @@
             <lu>
               <lit v="be"/>
               <lit-tag v="vbser"/>
+              <var n="person-number"/>
               <clip pos="1" side="tl" part="a_temps_vbser"/>
             </lu>
             
@@ -233,7 +238,6 @@
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="vblex"/>
               <lit-tag v="ger"/>
-              <var n="person-number"/>
             </lu>
           </chunk>
         </out>
@@ -291,6 +295,36 @@
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="vblex"/>
               <lit-tag v="pp"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
+    <!-- Convert genitive form to infinitive form, and add 'to' before vblex -->
+    <rule comment="INFINITIVE">
+      <pattern>
+        <pattern-item n="infinitive"/>
+      </pattern>
+      <action>
+        
+        <out>
+          <chunk name="infinitive" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="INF"/></tag>
+            </tags>
+            
+            <lu>
+              <lit v="to"/>
+              <lit-tag v="pr"/>
+            </lu>
+            
+            <b/>
+            
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="vblex"/>
+              <lit-tag v="inf"/>
             </lu>
           </chunk>
         </out>

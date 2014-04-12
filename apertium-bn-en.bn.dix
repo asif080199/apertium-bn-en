@@ -4601,6 +4601,13 @@
       </e>
       <e>
         <p>
+          <l>লো</l>
+          <r><s n="vblex" /><s n="past" /><s n="smpl" /><s n="p3" /><s n="infml" /></r>
+        </p>
+        <par n="enclitic" />
+      </e>
+      <e>
+        <p>
           <l>য়ে</l>
           <r><s n="vblex" /><s n="ppst" /></r>
         </p>
