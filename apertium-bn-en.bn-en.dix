@@ -168,6 +168,7 @@
     <e><p><l>prpers<s n="prn"/><s n="p3"/><s n="aa"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
     
     <e><p><l>সকল<s n="prn"/><s n="p3"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>all<s n="prn"/><s n="tn"/><s n="mf"/><s n="sp"/></r></p></e>
+    <e><p><l>সব<s n="prn"/><s n="p3"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>everything<s n="prn"/><s n="tn"/><s n="m"/><s n="sg"/></r></p></e>
 
     <e r="RL"><p><l>আমার<s n="det"/><s n="gen"/></l><r>my<s n="det"/><s n="pos"/><s n="sp"/></r></p></e>
     <e r="RL"><p><l>আমাদের<s n="det"/><s n="gen"/></l><r>our<s n="det"/><s n="pos"/><s n="sp"/></r></p></e>
@@ -179,6 +180,7 @@
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="an" /><s n="mf" /><s n="sg" /><s n="nom" /></l><r>this<s n="prn"/><s n="tn"/><s n="mf"/><s n="sg"/></r></p></e>
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="an" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>these<s n="prn"/><s n="tn"/><s n="mf"/><s n="pl"/></r></p></e>
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
+    <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="pol" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
     <e><p><l>prpers<s n="prn" /><s n="p3" /><s n="pol" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
@@ -202,6 +204,9 @@
     <!-- Relative pronouns-->
     
     <e><p><l>কাকে<s n="prn" /><s n="p3" /><s n="infml" /><s n="rel" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="obj" /></l><r>whom<s n="rel"/><s n="an"/><s n="mf"/><s n="sp"/></r></p></e>
+    <e><p><l>যা<s n="prn" /><s n="p3" /><s n="infml" /><s n="rel" /><s n="aa" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>those<b/>who<s n="rel"/><s n="nn"/><s n="mf"/><s n="pl"/></r></p></e>
+    <e r="LR"><p><l>যাঁ<s n="prn" /><s n="p3" /><s n="pol" /><s n="rel" /><s n="aa" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>those<b/>who<s n="rel"/><s n="nn"/><s n="mf"/><s n="pl"/></r></p></e>
+    
     
 
     <!-- Nouns -->
@@ -1221,6 +1226,7 @@
     <e><p><l>হিট<s n="n"/><s n="mf"/><s n="nn"/></l><r>hit<s n="n"/></r></p></e>
     <e><p><l>এপ্রিল<s n="n"/><s n="mf"/><s n="nn"/></l><r>April<s n="n"/></r></p></e>
     <e><p><l>তুলা<s n="n"/><s n="mf"/><s n="nn"/></l><r>cotton<s n="n"/></r></p></e>
+    <e><p><l>খাটিয়া<s n="n"/><s n="mf"/><s n="nn"/></l><r>hammock<s n="n"/></r></p></e>
     <e><p><l>জীবনী<s n="n"/><s n="nt"/><s n="nn"/></l><r>autobiography<s n="n"/></r></p></e>
     <e><p><l>পালানো<s n="n"/><s n="mf"/><s n="nn"/></l><r>fleeing<s n="n"/></r></p></e>
     <e><p><l>আচরণ<s n="n"/><s n="mf"/><s n="nn"/></l><r>behaviour<s n="n"/></r></p></e>
@@ -1234,6 +1240,7 @@
     <e><p><l>সদস্যপদ<s n="n"/><s n="nt"/><s n="nn"/></l><r>membership<s n="n"/></r></p></e>
     <e><p><l>প্রতিপক্ষ<s n="n"/><s n="mf"/><s n="nn"/></l><r>opponent<s n="n"/></r></p></e>
     <e><p><l>কাঠি<s n="n"/><s n="nt"/><s n="nn"/></l><r>stick<s n="n"/></r></p></e>
+    <e><p><l>দড়ি<s n="n"/><s n="nt"/><s n="nn"/></l><r>string<s n="n"/></r></p></e>
     <e><p><l>বক্তৃতা<s n="n"/><s n="mf"/><s n="nn"/></l><r>lecture<s n="n"/></r></p></e>
     <e><p><l>দেখানো<s n="n"/><s n="mf"/><s n="nn"/></l><r>showing<s n="n"/></r></p></e>
     <e><p><l>নাচা<s n="n"/><s n="mf"/><s n="nn"/></l><r>dancing<s n="n"/></r></p></e>
@@ -4778,6 +4785,7 @@
     <e><p><l>কমলা<s n="adj"/><s n="mf"/></l><r>orange<s n="adj"/></r></p></e>
     <e><p><l>সহজতর<s n="adj"/><s n="mf"/></l><r>easy<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>নীল<s n="adj"/><s n="mf"/></l><r>blue<s n="adj"/></r></p></e>
+    <e><p><l>আসমানি<s n="adj"/><s n="mf"/></l><r>blue<s n="adj"/></r></p></e>
     <e><p><l>উঁচু<s n="adj"/><s n="mf"/></l><r>high<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>আত্মঘাতী<s n="adj"/><s n="mf"/></l><r>suicidal<s n="adj"/></r></p></e>
     <e><p><l>মেডিকেল<s n="adj"/><s n="mf"/></l><r>medical<s n="adj"/></r></p></e>
@@ -5087,6 +5095,7 @@
     <e><p><l>হলুদ<s n="adj"/><s n="mf"/></l><r>yellow<s n="adj"/></r></p></e>
     <e><p><l>নিরাপত্তাহীন<s n="adj"/><s n="mf"/></l><r>insecured<s n="adj"/></r></p></e>
     <e><p><l>সহজ<s n="adj"/><s n="sint"/><s n="mf"/></l><r>easy<s n="adj"/><s n="sint"/></r></p></e>
+    <e r="LR"><p><l>অনায়াস<s n="adj"/><s n="sint"/><s n="mf"/></l><r>easy<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>অর্ধেক<s n="adj"/><s n="mf"/></l><r>half<s n="adj"/></r></p></e>
     <e><p><l>যোগ্য<s n="adj"/><s n="sint"/><s n="mf"/></l><r>capable<s n="adj"/></r></p></e>
     <e><p><l>বাংলা<s n="adj"/><s n="mf"/></l><r>Bengali<s n="adj"/></r></p></e>
@@ -6183,6 +6192,8 @@
     <e><p><l>ইয়েমেন<s n="np"/><s n="top"/><s n="mf"/></l><r>Yemen<s n="np"/><s n="top"/></r></p></e>
     <e><p><l>সিলেট<s n="np"/><s n="top"/><s n="mf"/></l><r>Sylhet<s n="np"/><s n="top"/></r></p></e>
     <e><p><l>প্যারিস<s n="np"/><s n="top"/><s n="mf"/></l><r>Paris<s n="np"/><s n="top"/></r></p></e>
+    <e><p><l>ইয়াকুব<s n="np"/></l><r>Yakub<s n="np"/></r></p></e>
+    <e><p><l>আলি<s n="np"/></l><r>Ali<s n="np"/></r></p></e>
 
     <!-- proper-nouns added @ Sun Jul 10 19:14:39 UTC 2011 -->
     <e><p><l>আরা<s n="np"/><s n="ant"/><s n="f"/></l><r>Ara<s n="np"/></r></p></e>
@@ -6746,7 +6757,6 @@
     <e><p><l>আফতাব<s n="np"/><s n="ant"/><s n="mf"/></l><r>Aftab<s n="np"/></r></p></e>
     <e><p><l>পাঞ্জাব<s n="np"/><s n="top"/><s n="mf"/></l><r>Punjab<s n="np"/><s n="top"/></r></p></e>
     <e><p><l>জ্যাকসন<s n="np"/><s n="ant"/><s n="m"/></l><r>Jackson<s n="np"/></r></p></e>
-    <e><p><l>আলি<s n="np"/><s n="ant"/><s n="m"/></l><r>Ali<s n="np"/></r></p></e>
     <e><p><l>রোমানিয়া<s n="np"/><s n="top"/><s n="mf"/></l><r>Romania<s n="np"/><s n="top"/></r></p></e>
     <e><p><l>জাফর<s n="np"/><s n="ant"/><s n="m"/></l><r>Jafar<s n="np"/></r></p></e>
     <e><p><l>জেএমবি<s n="np"/><s n="org"/><s n="mf"/></l><r>JMB<s n="np"/></r></p></e>
