@@ -88,6 +88,14 @@
 
     <sdef n="sent"      c="End of sentence marker"/>
     <sdef n="cm"        c="Comma"/>
+
+    <sdef n="def"          c="Definite"/>
+    <sdef n="dem"          c="Demonstrative"/>
+    <sdef n="ref"          c="Reflexive"/>
+    <sdef n="rel"          c="Relative"/>
+    <sdef n="rec"          c="Reciprocal"/>
+    <sdef n="qnt"          c="Quentifier"/>
+    <sdef n="ind"          c="Indicative"/>
   </sdefs>
   <section id="main" type="standard">
 
@@ -173,6 +181,7 @@
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
+    <e><p><l>prpers<s n="prn" /><s n="p3" /><s n="pol" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>prpers<s n="prn"/><s n="subj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="obj" /></l><r>prpers<s n="prn"/><s n="obj"/><s n="p3"/><s n="m"/><s n="sg"/></r></p></e>
     <e r="LR"><p><l>prpers<s n="prn" /><s n="p3" /><s n="infml" /><s n="aa" /><s n="mf" /><s n="pl" /><s n="obj" /></l><r>prpers<s n="prn"/><s n="obj"/><s n="p3"/><s n="mf"/><s n="pl"/></r></p></e>
     
@@ -188,6 +197,12 @@
     <e><p><l>সকল<s n="prn"/><s n="p3"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>all<s n="predet"/><s n="sp"/></r></p></e>
     <e><p><l>সবাই<s n="prn"/><s n="p3"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>all<s n="prn"/><s n="tn"/><s n="mf"/><s n="sp"/></r></p></e>
     <e><p><l>কেউ<s n="prn"/><s n="p3"/><s n="aa"/><s n="mf"/><s n="sp"/><s n="nom"/></l><r>someone<s n="prn"/><s n="tn"/><s n="m"/><s n="sg"/></r></p></e>
+    
+    
+    <!-- Relative pronouns-->
+    
+    <e><p><l>কাকে<s n="prn" /><s n="p3" /><s n="infml" /><s n="rel" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="obj" /></l><r>whom<s n="rel"/><s n="an"/><s n="mf"/><s n="sp"/></r></p></e>
+    
 
     <!-- Nouns -->
                             <!-- TODO: Add gender on the Bengali side -->
@@ -3307,6 +3322,7 @@
     <e><p><l>তারিফ<s n="n"/><s n="mf"/><s n="nn"/></l><r>praise<s n="n"/></r></p></e>
     <e><p><l>ডট<s n="n"/><s n="nt"/><s n="nn"/></l><r>dot<s n="n"/></r></p></e>
     <e><p><l>গার্ড<s n="n"/><s n="mf"/><s n="hu"/></l><r>guard<s n="n"/></r></p></e>
+    <e><p><l>দারোয়ান<s n="n"/><s n="mf"/><s n="hu"/></l><r>guard<s n="n"/></r></p></e>
     <e><p><l>উত্তরাধিকার<s n="n"/><s n="mf"/><s n="hu"/></l><r>inheritance<s n="n"/></r></p></e>
     <e><p><l>অধিগ্রহণ<s n="n"/><s n="mf"/><s n="nn"/></l><r>acquisition<s n="n"/></r></p></e>
     <e><p><l>অঙ্কন<s n="n"/><s n="mf"/><s n="nn"/></l><r>drawing<s n="n"/></r></p></e>
@@ -3669,6 +3685,7 @@
     <e><p><l>আছ<s n="vblex"/><s n="plprft"/></l><r>be<s n="vbser"/><s n="past"/><s n="p3"/><s n="sg"/></r></p></e>
     <e><p><l>আছ<s n="vblex"/><s n="plprft"/></l><r>be<s n="vbser"/><s n="past"/></r></p></e>
     <e><p><l>পড়<s n="vblex"/></l><r>read<s n="vblex"/></r></p></e>
+    <e><p><l>খোল<s n="vblex"/></l><r>open<s n="vblex"/></r></p></e>
     <e><p><l>নে<s n="vblex"/></l><r>take<s n="vblex"/></r></p></e>
     <e><p><l>লাগ<s n="vblex"/></l><r>start<s n="vblex"/></r></p></e>
     <e><p><l>ত্যাগ কর<s n="vblex"/></l><r>abandon<s n="vblex"/></r></p></e>
@@ -4021,7 +4038,7 @@
     <e><p><l>ধার দে<s n="vblex"/></l><r>loan<s n="vblex"/></r></p></e>
     <e><p><l>অবস্থান নির্ণয় কর<s n="vblex"/></l><r>locate<s n="vblex"/></r></p></e>
     <e><p><l>দেখ<s n="vblex"/></l><r>look<s n="vblex"/></r></p></e>
-    <e><p><l>দেখ<s n="vblex"/></l><r>look<s n="vblex"/></r></p></e>
+    <e><p><l>তাকা<s n="vblex"/></l><r>look<s n="vblex"/></r></p></e>
     <e><p><l>ভালবাস<s n="vblex"/></l><r>love<s n="vblex"/></r></p></e>
     <e><p><l>মধ্যাহ্নভোজন কর<s n="vblex"/></l><r>lunch<s n="vblex"/></r></p></e>
     <e><p><l>তৈরি কর<s n="vblex"/></l><r>make<s n="vblex"/></r></p></e>
@@ -5897,6 +5914,8 @@
     <e><p><l>দ্রুত<s n="adv"/></l><r>fast<s n="adv"/></r></p></e>
     <e><p><l>দ্রুতভাবে<s n="adv"/></l><r>quickly<s n="adv"/></r></p></e>
     <e><p><l>ধনাত্মকভাবে<s n="adv"/></l><r>positively<s n="adv"/></r></p></e>
+    <e><p><l>জি<s n="adv"/></l><r>yes<s n="adv"/></r></p></e>
+    <e><p><l>হুঁ<s n="adv"/></l><r>yes<s n="adv"/></r></p></e>
     <e><p><l>না<s n="adv"/></l><r>not<s n="adv"/></r></p></e>
     <e><p><l>নিঃশব্দে<s n="adv"/></l><r>silently<s n="adv"/></r></p></e>
     <e><p><l>নিকটে<s n="adv"/></l><r>near<s n="adv"/></r></p></e>

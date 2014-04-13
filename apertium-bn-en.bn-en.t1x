@@ -15,10 +15,13 @@
     <def-cat n="vblex">
       <cat-item tags="vblex.*"/>
     </def-cat>
-    <!-- Present simple, past simple, future simple -->
+    <!-- Present simple, past simple -->
     <def-cat n="simple">
       <cat-item tags="vblex.pres.smpl.*"/>
       <cat-item tags="vblex.past.smpl.*"/>
+    </def-cat>
+    <!-- Future simple -->
+    <def-cat n="future-simple">
       <cat-item tags="vblex.ft.smpl.*"/>
     </def-cat>
     <!-- Present continuous, past continuous, future continuous -->
@@ -42,6 +45,9 @@
       <cat-item tags="vblex.gen.*"/>
       <cat-item tags="vblex.inf"/>
       <cat-item tags="vblex.inf.*"/>
+    </def-cat>
+    <def-cat n="personal-pronoun">
+      <cat-item lemma="prpers" tags="prn.*"/>
     </def-cat>
   </section-def-cats>
 
@@ -129,7 +135,26 @@
     <def-var n="person-number"/>
     <def-var n="be"/>
     <def-var n="be-person-number"/>
+    <def-var n="shall-will"/>
   </section-def-vars>
+  
+  <section-def-macros>
+  
+    <!-- Insert shall<vaux><inf> -->
+  	<def-macro n="insert_shall_will" npar="0">
+  		<let>
+  		  <var n="shall-will"/>
+  		  <concat>
+  		    <lu>
+      		  <lit v="will"/>
+        		<lit-tag v="vaux"/>
+        		<lit-tag v="inf"/>
+      		</lu>
+        </concat>
+  		</let>
+  	</def-macro>
+  	
+  </section-def-macros>
 
   <section-rules>
 
@@ -159,7 +184,7 @@
       </action>
     </rule>
     
-    <!-- Change all pres/past/ft simple to pres/past/ft -->
+    <!-- Change all pres/past simple to pres/past -->
     <rule comment="VBLEX: SIMPLE">
       <pattern>
         <pattern-item n="simple"/>
@@ -168,13 +193,41 @@
         <out>
           <chunk name="verb" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="VB"/></tag>
+              <tag><lit-tag v="SIMPLE"/></tag>
             </tags>
             
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="vblex"/>
               <clip pos="1" side="tl" part="a_temps_vbser"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
+    <!-- Change vblex<ft> to vblex<inf>, and add shall/will -->
+    <rule comment="VBLEX: FUTURE-SIMPLE">
+      <pattern>
+        <pattern-item n="future-simple"/>
+      </pattern>
+      <action>
+        <call-macro n="insert_shall_will"/>
+        
+        <out>
+          <chunk name="verb" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SIMPLE"/></tag>
+            </tags>
+            
+            <var n="shall-will"/>
+            
+            <b/>
+            
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="vblex"/>
+              <lit-tag v="inf"/>
             </lu>
           </chunk>
         </out>
@@ -268,7 +321,7 @@
         <out>
           <chunk name="verb" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="VB"/></tag>
+              <tag><lit-tag v="CNT"/></tag>
             </tags>
             
             <var n="be"/>
@@ -320,7 +373,7 @@
         <out>
           <chunk name="verb" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="VB"/></tag>
+              <tag><lit-tag v="PERFECT"/></tag>
             </tags>
             
             <lu>
@@ -409,6 +462,28 @@
               <lit-tag v="num"/>
               <var n="number"/>
             </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
+    <!-- Catch all personal pronoun, capitialize them -->
+    <rule comment="PRN: PERSONAL">
+      <pattern>
+        <pattern-item n="personal-pronoun"/>
+      </pattern>
+      
+      <action>
+        <out>
+          <chunk name="pronoun" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRPERS"/></tag>
+            </tags>
+            
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            
           </chunk>
         </out>
       </action>

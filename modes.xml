@@ -131,7 +131,9 @@
         <file name="apertium-bn-en.bn-en.t3x"/>
         <file name="bn-en.t3x.bin"/>
       </program>
-      <program name="lt-proc $1">
+      <!-- Capitialize the first letter of every sentence -->
+      <program name="sed -e 's/^\(\s*\^\)\(.\)/\1\U\2/g' -e 's/\(sent>\$\s*\^\)\(.\)/\1\U\2/g' "/>
+      <program name="lt-proc -g">
         <file name="bn-en.autogen.bin"/>
       </program>
     </pipeline>
