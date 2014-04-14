@@ -205,6 +205,8 @@
     
     <e><p><l>কাকে<s n="prn" /><s n="p3" /><s n="infml" /><s n="rel" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="obj" /></l><r>whom<s n="rel"/><s n="an"/><s n="mf"/><s n="sp"/></r></p></e>
     <e><p><l>যা<s n="prn" /><s n="p3" /><s n="infml" /><s n="rel" /><s n="aa" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>those<b/>who<s n="rel"/><s n="nn"/><s n="mf"/><s n="pl"/></r></p></e>
+    <e><p><l>যা<s n="prn" /><s n="p3" /><s n="infml" /><s n="rel" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="nom" /></l><r>which<s n="rel"/><s n="an"/><s n="mf"/><s n="sp"/></r></p></e>
+    <e><p><l>যা<s n="prn" /><s n="p3" /><s n="infml" /><s n="rel" /><s n="aa" /><s n="mf" /><s n="sg" /><s n="gen" /></l><r>whose<s n="rel"/><s n="aa"/><s n="mf"/><s n="sp"/></r></p></e>
     <e r="LR"><p><l>যাঁ<s n="prn" /><s n="p3" /><s n="pol" /><s n="rel" /><s n="aa" /><s n="mf" /><s n="pl" /><s n="nom" /></l><r>those<b/>who<s n="rel"/><s n="nn"/><s n="mf"/><s n="pl"/></r></p></e>
     
     
@@ -471,6 +473,7 @@
     <e><p><l>ছাড়<s n="n"/><s n="mf"/><s n="nn"/></l><r>discount<s n="n"/></r></p></e>
     <e><p><l>আবিষ্কার<s n="n"/><s n="nt"/><s n="nn"/></l><r>discovery<s n="n"/></r></p></e>
     <e><p><l>বৈষম্য<s n="n"/><s n="nt"/><s n="nn"/></l><r>discrimination<s n="n"/></r></p></e>
+    <e><p><l>নিপীড়ন<s n="n"/><s n="nt"/><s n="nn"/></l><r>oppression<s n="n"/></r></p></e>
     <e><p><l>আলোচনা<s n="n"/><s n="nt"/><s n="nn"/></l><r>discussion<s n="n"/></r></p></e>
     <e><p><l>বিতর্ক<s n="n"/><s n="mf"/><s n="nn"/></l><r>dispute<s n="n"/></r></p></e>
     <e><p><l>জেলা<s n="n"/><s n="nt"/><s n="nn"/></l><r>district<s n="n"/></r></p></e>
@@ -2233,6 +2236,7 @@
     <e><p><l>জলাবদ্ধতা<s n="n"/><s n="nt"/><s n="nn"/></l><r>stagnancy<s n="n"/></r></p></e>
     <e><p><l>অর্পণ<s n="n"/><s n="mf"/><s n="nn"/></l><r>bestowal<s n="n"/></r></p></e>
     <e><p><l>বিরোধিতা<s n="n"/><s n="mf"/><s n="nn"/></l><r>opposition<s n="n"/></r></p></e>
+    <e><p><l>প্রতিকূলতা<s n="n"/><s n="mf"/><s n="nn"/></l><r>hostility<s n="n"/></r></p></e>
     <e><p><l>দেরি<s n="n"/><s n="mf"/><s n="nn"/></l><r>delay<s n="n"/></r></p></e>
     <e><p><l>প্রত্যাহার<s n="n"/><s n="mf"/><s n="nn"/></l><r>cancel<s n="n"/></r></p></e>
     <e><p><l>জীবনযাপন<s n="n"/><s n="nt"/><s n="nn"/></l><r>livelihood<s n="n"/></r></p></e>
@@ -2827,7 +2831,6 @@
     <e><p><l>দ্বীপ<s n="n"/><s n="nt"/><s n="nn"/></l><r>island<s n="n"/></r></p></e>
     <e><p><l>পুরাণ<s n="n"/><s n="nt"/><s n="nn"/></l><r>mythology<s n="n"/></r></p></e>
     <e><p><l>টেমপ্লেট<s n="n"/><s n="nt"/><s n="nn"/></l><r>template<s n="n"/></r></p></e>
-    <e><p><l>এশিয়া<s n="n"/><s n="nt"/><s n="nn"/></l><r>asia<s n="n"/></r></p></e>
     <e><p><l>স্টাম্পিং<s n="n"/><s n="nt"/><s n="nn"/></l><r>stumping<s n="n"/></r></p></e>
     <e><p><l>ব্যবহারকারী<s n="n"/><s n="mf"/><s n="hu"/></l><r>user<s n="n"/></r></p></e>
     <e><p><l>মৃত্যুবরণ<s n="n"/><s n="nt"/><s n="nn"/></l><r>death<s n="n"/></r></p></e>
@@ -4457,7 +4460,7 @@
     <e><p><l>ব্যবসায়িক<s n="adj"/><s n="mf"/></l><r>commercial<s n="adj"/></r></p></e>
     <e><p><l>গৃহীত<s n="adj"/><s n="mf"/></l><r>accepted<s n="adj"/></r></p></e>
     <e><p><l>বিখ্যাত<s n="adj"/><s n="mf"/></l><r>famous<s n="adj"/></r></p></e>
-    <e><p><l>এশীয়<s n="adj"/><s n="mf"/></l><r>asian<s n="adj"/></r></p></e>
+    <e><p><l>এশীয়<s n="adj"/><s n="mf"/></l><r>asian<s n="adj"/></r></p></e>
     <e r="RL"><p><l>কঠিন<s n="adj"/><s n="sint"/><s n="mf"/></l><r>solid<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>কঠিন<s n="adj"/><s n="sint"/><s n="mf"/></l><r>tough<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>বিশাল<s n="adj"/><s n="mf"/></l><r>huge<s n="adj"/></r></p></e>
@@ -6004,7 +6007,9 @@
     <e><p><l>অন্ততঃ<s n="adv"/></l><r>at<b/>least<s n="adv"/></r></p></e>
     <e><p><l>সামগ্রিকভাবে<s n="adv"/></l><r>overall<s n="adv"/></r></p></e>
     <!--upto now: 258-->
-
+    <e><p><l>দক্ষিণ<s n="adv"/></l><r>south<s n="adv"/></r></p></e>
+    <e><p><l>এছাড়া<s n="adv"/></l><r>besides<s n="adv"/></r></p></e>
+    <e><p><l>পরবর্তী<s n="adv"/></l><r>after<s n="adv"/></r></p></e>
 
     <!-- Proper Nouns (added later)-->
     <e><p><l>জাহের<s n="np"/><s n="ant"/><s n="m"/></l><r>Zaher<s n="np"/><s n="ant"/></r></p></e>
@@ -6112,7 +6117,7 @@
     <e><p><l>ইসরায়েল<s n="np"/><s n="top"/><s n="mf"/></l><r>Israel<s n="np"/><s n="top"/></r></p></e>
     <e><p><l>নিউটন<s n="np"/><s n="ant"/><s n="m"/></l><r>Newton<s n="np"/><s n="ant"/></r></p></e>
     <e><p><l>কাশ্মীর<s n="np"/><s n="top"/><s n="mf"/></l><r>Kashmir<s n="np"/><s n="top"/></r></p></e>
-    <e><p><l>বাংলাদেশ<s n="np"/><s n="top"/><s n="mf"/></l><r>Bangladesh<s n="np"/><s n="top"/></r></p></e>
+    <e><p><l>বাংলাদেশ<s n="np"/><s n="top"/></l><r>Bangladesh<s n="np"/><s n="top"/></r></p></e>
     <e><p><l>ময়মনসিংহ<s n="np"/><s n="top"/><s n="mf"/></l><r>Mymensingh<s n="np"/><s n="top"/></r></p></e>
     <e><p><l>পেন্টাগন<s n="np"/><s n="top"/><s n="mf"/></l><r>The<b/>Pentagon<s n="np"/><s n="top"/></r></p></e>
     <e><p><l>নাইজার<s n="np"/><s n="top"/><s n="mf"/></l><r>Niger<s n="np"/><s n="top"/></r></p></e>
@@ -6239,7 +6244,7 @@
     <e><p><l>তানজানিয়া<s n="np"/><s n="top"/><s n="mf"/></l><r>Tanzania<s n="np"/></r></p></e>
     <e><p><l>জাকির<s n="np"/><s n="ant"/><s n="m"/></l><r>Zakir<s n="np"/></r></p></e>
     <e><p><l>চক্রবর্তী<s n="np"/><s n="ant"/><s n="mf"/></l><r>Chakraborty<s n="np"/></r></p></e>
-    <e><p><l>ইন্ডিয়ান<s n="np"/><s n="top"/><s n="mf"/></l><r>Indian<s n="np"/></r></p></e>
+    <e><p><l>ইন্ডিয়ান<s n="np"/></l><r>Indian<s n="np"/></r></p></e>
     <e><p><l>খোকন<s n="np"/><s n="ant"/><s n="m"/></l><r>Khokon<s n="np"/></r></p></e>
     <e><p><l>গিনি<s n="np"/><s n="top"/><s n="mf"/></l><r>Guinea<s n="np"/></r></p></e>
     <e><p><l>মুফতি<s n="np"/><s n="ant"/><s n="m"/></l><r>Mufti<s n="np"/></r></p></e>
@@ -6301,7 +6306,7 @@
     <e><p><l>কাজী<s n="np"/><s n="ant"/><s n="m"/></l><r>Qazi<s n="np"/></r></p></e>
     <e><p><l>মস্কো<s n="np"/><s n="top"/><s n="mf"/></l><r>Moscow<s n="np"/></r></p></e>
     <e><p><l>জুলিয়ান<s n="np"/><s n="ant"/><s n="m"/></l><r>Julian<s n="np"/></r></p></e>
-    <e><p><l>এশিয়া<s n="np"/><s n="top"/><s n="mf"/></l><r>Asia<s n="np"/></r></p></e>
+    <e><p><l>এশিয়া<s n="np"/></l><r>Asia<s n="np"/></r></p></e>
     <e><p><l>আনোয়ারুল<s n="np"/><s n="ant"/><s n="mf"/></l><r>Anwarul<s n="np"/></r></p></e>
     <e><p><l>জিয়াউর<s n="np"/><s n="ant"/><s n="m"/></l><r>Ziaur<s n="np"/></r></p></e>
     <e><p><l>বেলায়েত<s n="np"/><s n="ant"/><s n="m"/></l><r>Belayet<s n="np"/></r></p></e>

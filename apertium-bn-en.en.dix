@@ -28082,7 +28082,10 @@
 
 
                         <e lm="news" i=""><i>news</i><par n="politics__n"/></e>
-
+                        
+                        <e lm="calamity" i=""><i>calamit</i><par n="bab/y__n"/></e>
+                        
+                        <e lm="famine" i=""><i>famine</i><par n="politics__n"/></e>
 
                         <e lm="history" i=""><i>histor</i><par n="bab/y__n"/></e>
 
@@ -30913,7 +30916,8 @@
 
 
                         <e lm="discrimination" i=""><i>discrimination</i><par n="house__n"/></e>
-
+                        
+                        <e lm="oppression" i=""><i>oppression</i><par n="house__n"/></e>
 
                         <e lm="cooking" i=""><i>cooking</i><par n="house__n"/></e>
 
@@ -33239,6 +33243,7 @@
 
 
                         <e lm="chaos" i=""><i>chaos</i><par n="politics__n"/></e>
+                        
 
 
                         <e lm="uncertainty" i=""><i>uncertaint</i><par n="bab/y__n"/></e>
