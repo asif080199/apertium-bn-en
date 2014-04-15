@@ -3542,6 +3542,20 @@
         </p>
       </e>
 
+                              <e i="" r="RL">
+        <p>
+          <l>are</l>
+          <r>be<s n="vbser"/><s n="pres"/><s n="pl"/></r>
+        </p>
+      </e>
+
+                              <e i="" r="RL">
+        <p>
+          <l>is</l>
+          <r>be<s n="vbser"/><s n="pres"/><s n="sg"/></r>
+        </p>
+      </e>
+
                               <e i="">
         <p>
           <l>am</l>
@@ -10960,6 +10974,62 @@
 
 
 
+<pardef n="progen__prn">
+
+      
+                              <e i="">
+        <p>
+          <l>my</l>
+          <r>prpers<s n="prn"/><s n="gen"/><s n="p1"/><s n="mf"/><s n="sg"/></r>
+        </p>
+      </e>
+
+      
+                              <e i="">
+        <p>
+          <l>your</l>
+          <r>prpers<s n="prn"/><s n="gen"/><s n="p2"/><s n="mf"/><s n="sp"/></r>
+        </p>
+      </e>
+
+      
+                              <e i="">
+        <p>
+          <l>his</l>
+          <r>prpers<s n="prn"/><s n="gen"/><s n="p3"/><s n="m"/><s n="sg"/></r>
+        </p>
+      </e>
+
+                              <e i="">
+        <p>
+          <l>her</l>
+          <r>prpers<s n="prn"/><s n="gen"/><s n="p3"/><s n="f"/><s n="sg"/></r>
+        </p>
+      </e>
+
+                              <e i="">
+        <p>
+          <l>its</l>
+          <r>prpers<s n="prn"/><s n="gen"/><s n="p3"/><s n="nt"/><s n="sg"/></r>
+        </p>
+      </e>
+
+                              <e i="">
+        <p>
+          <l>our</l>
+          <r>prpers<s n="prn"/><s n="gen"/><s n="p1"/><s n="mf"/><s n="pl"/></r>
+        </p>
+      </e>
+
+                              <e i="">
+        <p>
+          <l>their</l>
+          <r>prpers<s n="prn"/><s n="gen"/><s n="p3"/><s n="mf"/><s n="pl"/></r>
+        </p>
+      </e>
+
+     
+    </pardef>
 
 
 
@@ -60987,6 +61057,8 @@
                         <e lm="pronoms personals de subjecte" i=""><i/><par n="prsubj__prn"/></e>
 
                         <e lm="pronoms personals d'objecte" i=""><i/><par n="probj__prn"/></e>
+                        
+                        <e lm="genetive pronoun" i=""><i/><par n="progen__prn"/></e>
 
  
                         <e lm="myself" i=""><p><l>myself</l><r>myself<s n="prn"/><s n="ref"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>

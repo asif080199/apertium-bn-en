@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <transfer default="chunk">
   <section-def-cats>
-    <def-cat n="nom">
+    <def-cat n="noun">
       <cat-item tags="n.*"/>
       <cat-item tags="np.*"/>
+    </def-cat>
+    <def-cat n="n-nom">
+      <!-- গরু, বাচ্চা -->
+      <cat-item tags="n.*.*.*.nom"/>
+      <cat-item tags="n.*.*.*.nom.*"/>
+      <!-- ইয়াকুব, বাংলাদেশ -->
+      <cat-item tags="np.*.*.*.nom" />
+    </def-cat>
+    <def-cat n="prn-nom">
+      <!-- আমি, তুমি, সে -->
+      <cat-item lemma="prpers" tags="prn.*.*.*.*.nom"/>
+      <cat-item lemma="prpers" tags="prn.*.*.*.*.*.nom"/>
+    </def-cat>
+    <def-cat n="n-gen">
+      <!-- গরুর, বাচ্চার -->
+      <cat-item tags="n.*.*.*.gen"/>
+      <cat-item tags="n.*.*.*.gen.*"/>
+      <!-- ইয়াকুবের, বাংলাদেশের -->
+      <cat-item tags="np.*.*.*.gen" />
+    </def-cat>
+    <def-cat n="prn-gen">
+      <!-- আমার, তোমার, তার -->
+      <cat-item lemma="prpers" tags="prn.*.*.*.*.gen"/>
+      <cat-item lemma="prpers" tags="prn.*.*.*.*.*.gen"/>
     </def-cat>
     <def-cat n="proper-noun-ant">
       <cat-item tags="np.ant.*"/>
@@ -14,9 +38,6 @@
     <def-cat n="adj">
       <cat-item tags="adj"/>
       <cat-item tags="adj.*"/>
-    </def-cat>
-    <def-cat n="genitive">
-      <cat-item tags="a_gen"/>
     </def-cat>
     <def-cat n="vblex">
       <cat-item tags="vblex.*"/>
@@ -58,9 +79,11 @@
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="a_nom">
+    <def-attr n="a_pos">
       <attr-item tags="n"/>
       <attr-item tags="np"/>
+      <attr-item tags="adj"/>
+      <attr-item tags="prn"/>
     </def-attr>
     <def-attr n="a_proper">
       <attr-item tags="al"/>
@@ -171,6 +194,60 @@
 
   <section-rules>
 
+    <!-- Sintagmas nominales -->
+    
+    <!-- বাংলাদেশ, জেলখানা -->
+
+    <rule comment="REGLA: NOUN-NOM">
+      <pattern>
+        <pattern-item n="noun"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="nom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+              <tag><lit-tag v="nom"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_pos"/>
+              <clip pos="1" side="tl" part="a_nbr" link-to="2"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
+    <!-- বাংলাদেশ, জেলখানা -->
+
+    <rule comment="REGLA: NOUN-NOM">
+      <pattern>
+        <pattern-item n="n-nom"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="nom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+              <tag><lit-tag v="nom"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_pos"/>
+              <clip pos="1" side="tl" part="a_nbr" link-to="2"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <!-- Proper Nouns: Antroponyms-->
 
     <rule comment="REGLA: PROP-ANT">
@@ -188,10 +265,11 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
-              <clip pos="1" side="tl" part="a_nom"/>
+              <clip pos="1" side="tl" part="a_pos"/>
               <clip pos="1" side="tl" part="a_proper"/>
               <clip pos="1" side="tl" part="a_gen" link-to="2"/>
               <clip pos="1" side="tl" part="a_nbr" link-to="3"/>
+              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
@@ -214,36 +292,51 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
-              <clip pos="1" side="tl" part="a_nom"/>
+              <clip pos="1" side="tl" part="a_pos"/>
               <clip pos="1" side="tl" part="a_proper"/>
               <clip pos="1" side="tl" part="a_nbr" link-to="2"/>
+              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
       </action>
     </rule>
 
-    <!-- Sintagmas nominales -->
+    <!-- আমার গরু, তোমার বই -->
 
-    <rule comment="REGLA: NOM">
+    <rule comment="REGLA: GEN NOM">
       <pattern>
-        <pattern-item n="nom"/>
+        <pattern-item n="prn-gen"/>
+        <pattern-item n="n-nom"/>
       </pattern>
       <action>
         <out>
           <chunk name="nom" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><clip pos="1" side="tl" part="a_gen"/></tag>
-              <tag><clip pos="1" side="tl" part="a_nbr"/></tag>
+              <tag><clip pos="2" side="tl" part="a_nbr"/></tag>
               <tag><lit-tag v="nom"/></tag>
             </tags>
+            
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
-              <clip pos="1" side="tl" part="a_nom"/>
-              <clip pos="1" side="tl" part="a_nbr" link-to="2"/>
+              <clip pos="1" side="sl" part="a_pos"/>
+              <lit-tag v="gen"/>
+              <clip pos="1" side="sl" part="a_pers"/>
+              <clip pos="1" side="sl" part="a_gen"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
+            
+            <b/>
+            
+            <lu>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="a_pos"/>
+              <clip pos="2" side="tl" part="a_nbr" link-to="2"/>
+              <clip pos="2" side="tl" part="lemq"/>
+            </lu>
+            
           </chunk>
         </out>
       </action>
@@ -262,9 +355,10 @@
             </tags>
             
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="lemh"/>
               <lit-tag v="vblex"/>
               <clip pos="1" side="tl" part="a_temps_vbser"/>
+              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
@@ -290,9 +384,10 @@
             <b/>
             
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="lemh"/>
               <lit-tag v="vblex"/>
               <lit-tag v="inf"/>
+              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
@@ -392,10 +487,11 @@
             <var n="be"/>
             
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="lemh"/>
               <lit-tag v="vblex"/>
               <lit-tag v="ger"/>
               <var n="be-person-number"/>
+              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
@@ -480,9 +576,10 @@
             <b/>
             
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="lemh"/>
               <lit-tag v="vblex"/>
               <lit-tag v="inf"/>
+              <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
@@ -523,9 +620,10 @@
             </tags>
             
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
+              <clip pos="1" side="tl" part="lemh"/>
               <lit-tag v="num"/>
               <var n="number"/>
+              <clip pos="1" side="tl" part="q"/>
             </lu>
           </chunk>
         </out>
@@ -554,11 +652,32 @@
       </action>
     </rule>
     
-    <!-- An adjective followed by a noun -->
+    <!-- An adjective -->
+    <rule comment="ADJ">
+      <pattern>
+        <pattern-item n="adj"/>
+      </pattern>
+      
+      <action>
+        <out>
+          <chunk name="adj" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
+    <!-- ভাল ছেলে, সুন্দর জামা -->
     <rule comment="ADJ-NOM">
       <pattern>
         <pattern-item n="adj"/>
-        <pattern-item n="nom"/>
+        <pattern-item n="n-nom"/>
       </pattern>
       
       <action>
@@ -566,6 +685,8 @@
           <chunk name="adj_nom" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="2" side="tl" part="a_gen"/></tag>
+              <tag><clip pos="2" side="tl" part="a_nbr"/></tag>
             </tags>
             
             <lu>
@@ -575,7 +696,10 @@
             <b/>
             
             <lu>
-              <clip pos="2" side="tl" part="whole"/>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="a_pos"/>
+              <clip pos="2" side="tl" part="a_nbr" link-to="2"/>
+              <clip pos="2" side="tl" part="lemq"/>
             </lu>
             
           </chunk>

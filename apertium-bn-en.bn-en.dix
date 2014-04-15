@@ -118,7 +118,6 @@
            be good to treat reflexive and possessive pronouns similarly in English. -->
 
     <e><p><l>prpers<s n="prn"/><s n="p1"/><s n="aa"/><s n="mf"/><s n="sg"/><s n="nom"/></l><r>prpers<s n="prn"/><s n="subj"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
-    <e r="LR"><p><l>prpers<s n="prn"/><s n="p1"/><s n="aa"/><s n="mf"/><s n="sg"/><s n="gen"/></l><r>prpers<s n="prn"/><s n="obj"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
     <e><p><l>prpers<s n="prn"/><s n="p1"/><s n="aa"/><s n="mf"/><s n="sg"/><s n="obj"/></l><r>prpers<s n="prn"/><s n="obj"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
     <e><p><l>prpers<s n="prn"/><s n="p1"/><s n="aa"/><s n="mf"/><s n="sg"/><s n="pos"/></l><r>mine<s n="prn"/><s n="pos"/><s n="mf"/><s n="sp"/></r></p></e>
     <e><p><l>নিজে<s n="prn"/><s n="ref"/><s n="aa"/><s n="mf"/><s n="sg"/></l><r>myself<s n="prn"/><s n="ref"/><s n="p1"/><s n="mf"/><s n="sg"/></r></p></e>
@@ -169,6 +168,8 @@
     
     <e><p><l>সকল<s n="prn"/><s n="p3"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>all<s n="prn"/><s n="tn"/><s n="mf"/><s n="sp"/></r></p></e>
     <e><p><l>সব<s n="prn"/><s n="p3"/><s n="mf"/><s n="pl"/><s n="nom"/></l><r>everything<s n="prn"/><s n="tn"/><s n="m"/><s n="sg"/></r></p></e>
+    
+    <e><p><l>prpers</l><r>prpers</r></p></e>
 
     <e r="RL"><p><l>আমার<s n="det"/><s n="gen"/></l><r>my<s n="det"/><s n="pos"/><s n="sp"/></r></p></e>
     <e r="RL"><p><l>আমাদের<s n="det"/><s n="gen"/></l><r>our<s n="det"/><s n="pos"/><s n="sp"/></r></p></e>

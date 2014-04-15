@@ -10,28 +10,61 @@
       <cat-item tags="SV"/>
       <cat-item tags="SV.*"/>
     </def-cat>
+    <def-cat n="nom">
+      <cat-item lemma="nom" tags="SN"/>
+      <cat-item lemma="nom" tags="SN.*"/>
+    </def-cat>
+    <def-cat n="adj">
+      <cat-item lemma="adj" tags="SN"/>
+      <cat-item lemma="adj" tags="SN.*"/>
+      <cat-item lemma="adj_nom" tags="SN*"/>
+      <cat-item lemma="adj_nom" tags="SN.*"/>
+    </def-cat>
   </section-def-cats>
 
   <section-def-attrs>
-    <def-attr n="gen">
+    <def-attr n="a_gen">
       <attr-item tags="f"/>
       <attr-item tags="m"/>
       <attr-item tags="mf"/>
       <attr-item tags="nt"/>
       <attr-item tags="GD"/>
     </def-attr>
-    <def-attr n="nbr">
+    <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
+    <def-attr n="a_pers">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+      <attr-item tags="impers"/>
+    </def-attr>
   </section-def-attrs>
 
   <section-def-vars>
-    <def-var n="nombre"/>
-    <def-var n="genere"/>
+    <def-var n="be"/>
   </section-def-vars>
+  
+  <section-def-macros>
+  
+    <!-- Insert is/are verb -->
+  	<def-macro n="insert_is_are" npar="1">
+  		<let>
+  		  <var n="be"/>
+  		  <concat>
+    		  <lit v="be"/>
+    		  <lit-tag v="vbser"/>
+    		  <lit-tag v="pres"/>
+      	  <clip pos="1" part="a_pers"/>
+      	  <clip pos="1" part="a_nbr"/>
+        </concat>
+  		</let>
+  	</def-macro>
+  	
+  </section-def-macros>
 
   <section-rules>
 
@@ -70,6 +103,44 @@
             <clip pos="3" part="chcontent"/>
           </chunk>
 	  <b pos="2"/>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <!-- আমার জুতা সুন্দর, রহিম ভাল ছেলে -->
+    <rule comment="REGLA: nom adj">
+      <pattern>
+        <pattern-item n="nom"/>
+        <pattern-item n="adj"/>
+      </pattern>
+      <action>
+		    <call-macro n="insert_is_are">
+			    <with-param pos="1"/>
+		    </call-macro>
+        
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          
+    	    <b/>
+    	    
+  	      <chunk>
+  	        <lit v="be"/>
+  	        <lit v="{^"/>
+      	    <var n="be"/>
+      	    <lit v="$}"/>
+    	    </chunk>
+    	    
+    	    <b/>
+    	  
           <chunk>
             <clip pos="2" part="lem"/>
             <clip pos="2" part="tags"/>
