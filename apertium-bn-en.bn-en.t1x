@@ -304,7 +304,7 @@
 
     <!-- আমার গরু, তোমার বই -->
 
-    <rule comment="REGLA: GEN NOM">
+    <rule comment="REGLA: PRN-GEN NOM">
       <pattern>
         <pattern-item n="prn-gen"/>
         <pattern-item n="n-nom"/>
@@ -335,6 +335,50 @@
               <clip pos="2" side="tl" part="a_pos"/>
               <clip pos="2" side="tl" part="a_nbr" link-to="2"/>
               <clip pos="2" side="tl" part="lemq"/>
+            </lu>
+            
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <!-- দেশের অবস্থা, নৌকার গতি -->
+
+    <rule comment="REGLA: NOUN-GEN NOM">
+      <pattern>
+        <pattern-item n="n-gen"/>
+        <pattern-item n="n-nom"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="nom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="2" side="tl" part="a_nbr"/></tag>
+              <tag><lit-tag v="nom"/></tag>
+            </tags>
+            
+            <lu>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="a_pos"/>
+              <clip pos="2" side="tl" part="a_nbr" link-to="2"/>
+              <clip pos="2" side="tl" part="lemq"/>
+            </lu>
+            
+            <b/>
+            
+            <lu>
+              <lit v="of"/>
+              <lit-tag v="pr"/>
+            </lu>
+            
+            <b/>
+            
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="sl" part="a_pos"/>
+              <clip pos="1" side="sl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="lemq"/>
             </lu>
             
           </chunk>

@@ -6011,6 +6011,7 @@
     <e><p><l>দক্ষিণ<s n="adv"/></l><r>south<s n="adv"/></r></p></e>
     <e><p><l>এছাড়া<s n="adv"/></l><r>besides<s n="adv"/></r></p></e>
     <e><p><l>পরবর্তী<s n="adv"/></l><r>after<s n="adv"/></r></p></e>
+    <e><p><l>ঠিক<s n="adv"/></l><r>right<s n="adv"/></r></p></e>
 
     <!-- Proper Nouns (added later)-->
     <e><p><l>জাহের<s n="np"/><s n="ant"/><s n="m"/></l><r>Zaher<s n="np"/><s n="ant"/></r></p></e>
