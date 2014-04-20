@@ -329,7 +329,6 @@
 	      <chunk name="nom" case="caseFirstWord">
           <tags>
             <tag><lit-tag v="SN"/></tag>
-            <tag><clip pos="1" side="sl" part="a_gen"/></tag>
             <tag><clip pos="1" side="sl" part="a_nbr"/></tag>
             <tag><clip pos="1" side="sl" part="a_role"/></tag>
           </tags>
@@ -337,8 +336,7 @@
             <clip pos="1" side="tl" part="lemh"/>
             <clip pos="1" side="sl" part="a_pos"/>
             <clip pos="1" side="sl" part="a_proper"/>
-            <clip pos="1" side="sl" part="a_gen" link-to="2"/>
-            <clip pos="1" side="sl" part="a_nbr" link-to="3"/>
+            <clip pos="1" side="sl" part="a_nbr" link-to="2"/>
             <clip pos="1" side="tl" part="lemq"/>
           </lu>
         </chunk>
