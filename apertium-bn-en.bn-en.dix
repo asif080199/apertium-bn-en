@@ -104,6 +104,7 @@
     <e><p><l>এবং<s n="cnjcoo"/></l><r>and<s n="cnjcoo"/></r></p></e>
     <e><p><l>আর<s n="cnjcoo"/></l><r>or<s n="cnjcoo"/></r></p></e>
     <e><p><l>কিন্ত<s n="cnjcoo"/></l><r>but<s n="cnjcoo"/></r></p></e>
+    <e><p><l>কিন্তু<s n="cnjcoo"/></l><r>but<s n="cnjcoo"/></r></p></e>
     <e><p><l>অথচ<s n="cnjcoo"/></l><r>or<s n="cnjcoo"/></r></p></e>
     <e><p><l>কিংবা<s n="cnjcoo"/></l><r>or<s n="cnjcoo"/></r></p></e>
     <e><p><l>অথবা<s n="cnjcoo"/></l><r>or<s n="cnjcoo"/></r></p></e>
@@ -4437,7 +4438,8 @@
     <e><p><l>ফাঁকা<s n="adj"/><s n="mf"/></l><r>empty<s n="adj"/><s n="sint"/></r></p></e>
     <e><p><l>অবস্থিত<s n="adj"/><s n="mf"/></l><r>placed<s n="adj"/></r></p></e>
     <e><p><l>কড়া<s n="adj"/><s n="mf"/></l><r>rough<s n="adj"/><s n="sint"/></r></p></e>
-    <e><p><l>এশিয়ান<s n="adj"/><s n="mf"/></l><r>asian<s n="adj"/></r></p></e>
+    <e><p><l>এশিয়ান<s n="adj"/><s n="mf"/></l><r>Asian<s n="adj"/></r></p></e>
+    <e><p><l>এশীয়<s n="adj"/><s n="mf"/></l><r>Asian<s n="adj"/></r></p></e>
     <e><p><l>নাটকীয়<s n="adj"/><s n="mf"/></l><r>dramatic<s n="adj"/></r></p></e>
     <e><p><l>অলৌকিক<s n="adj"/><s n="mf"/></l><r>supernatural<s n="adj"/></r></p></e>
     <e><p><l>তাৎক্ষণিক<s n="adj"/><s n="mf"/></l><r>sudden<s n="adj"/></r></p></e>
@@ -5893,7 +5895,7 @@
     <e><p><l>এভাবেই<s n="adv"/></l><r>thus<s n="adv"/></r></p></e>
     <e><p><l>এমনকি<s n="adv"/></l><r>even<s n="adv"/></r></p></e>
     <e><p><l>এরপর<s n="adv"/></l><r>then<s n="adv"/></r></p></e>
-    <e><p><l>ও<s n="adv"/></l><r>and<s n="adv"/></r></p></e>
+    <e><p><l>ও<s n="adv"/></l><r>and<s n="cnjcoo"/></r></p></e>
     <e><p><l>কখনো<s n="adv"/></l><r>never<s n="adv"/></r></p></e>
     <e><p><l>কখনোই<s n="adv"/></l><r>never<s n="adv"/></r></p></e>
     <e><p><l>কম<s n="adv"/></l><r>less<s n="adv"/></r></p></e>
@@ -7310,7 +7312,6 @@
     <e><p><l>রাজাকার<s n="np"/><s n="al"/><s n="mf"/></l><r>Rajakar<s n="np"/></r></p></e>
     <e><p><l>দেবেন্দ্রনাথ<s n="np"/><s n="ant"/><s n="m"/></l><r>Debendranath<s n="np"/></r></p></e>
     <e><p><l>কলিকাতা<s n="np"/><s n="top"/><s n="mf"/></l><r>Calcutta<s n="np"/></r></p></e>
-    <e><p><l>এশিয়ান<s n="np"/><s n="ant"/><s n="mf"/></l><r>Asian<s n="np"/></r></p></e>
     <e><p><l>আরএনএ<s n="np"/><s n="al"/><s n="mf"/></l><r>RNA<s n="np"/></r></p></e>
     <e><p><l>সলিমুল্লাহ<s n="np"/><s n="ant"/><s n="m"/></l><r>Salimullah<s n="np"/></r></p></e>
     <e><p><l>মোতাহার<s n="np"/><s n="ant"/><s n="m"/></l><r>Motahar<s n="np"/></r></p></e>
