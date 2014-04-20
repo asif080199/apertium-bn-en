@@ -4,6 +4,7 @@
     <def-cat n="noun">
       <cat-item tags="n.*"/>
     </def-cat>
+    
     <def-cat n="n-nom">
       <!-- গরু, বাচ্চা -->
       <cat-item tags="n.*.*.*.nom"/>
@@ -11,11 +12,13 @@
       <!-- ইয়াকুব, বাংলাদেশ -->
       <cat-item tags="np.*.*.*.nom" />
     </def-cat>
+    
     <def-cat n="prn-nom">
       <!-- আমি, তুমি, সে -->
       <cat-item lemma="prpers" tags="prn.*.*.*.*.nom"/>
       <cat-item lemma="prpers" tags="prn.*.*.*.*.*.nom"/>
     </def-cat>
+    
     <def-cat n="nom">
       <cat-item tags="n.*.*.*.nom"/>
       <cat-item tags="n.*.*.*.nom.*"/>
@@ -23,6 +26,7 @@
       <cat-item lemma="prpers" tags="prn.*.*.*.*.nom"/>
       <cat-item lemma="prpers" tags="prn.*.*.*.*.*.nom"/>
     </def-cat>
+    
     <def-cat n="n-gen">
       <!-- গরুর, বাচ্চার -->
       <cat-item tags="n.*.*.*.gen"/>
@@ -30,36 +34,44 @@
       <!-- ইয়াকুবের, বাংলাদেশের -->
       <cat-item tags="np.*.*.*.gen" />
     </def-cat>
+    
     <def-cat n="prn-gen">
       <!-- আমার, তোমার, তার -->
       <cat-item lemma="prpers" tags="prn.*.*.*.*.gen"/>
       <cat-item lemma="prpers" tags="prn.*.*.*.*.*.gen"/>
     </def-cat>
+    
     <def-cat n="proper-noun">
       <cat-item tags="np.*"/>
     </def-cat>
+    
     <def-cat n="adj">
       <cat-item tags="adj"/>
       <cat-item tags="adj.*"/>
     </def-cat>
+    
     <def-cat n="vblex">
       <cat-item tags="vblex.*"/>
     </def-cat>
+    
     <!-- Present simple, past simple -->
     <def-cat n="simple">
       <cat-item tags="vblex.pres.smpl.*"/>
       <cat-item tags="vblex.past.smpl.*"/>
     </def-cat>
+    
     <!-- Future simple -->
     <def-cat n="future-simple">
       <cat-item tags="vblex.ft.smpl.*"/>
     </def-cat>
+    
     <!-- Present continuous, past continuous, future continuous -->
     <def-cat n="cnt">
       <cat-item tags="vblex.pres.cnt.*"/>
       <cat-item tags="vblex.past.cnt.*"/>
       <cat-item tags="vblex.ft.cnt.*"/>
     </def-cat>
+    
     <!-- Present perfect, past perfect -->
     <def-cat n="perfect">
       <cat-item tags="vblex.prft"/>
@@ -67,18 +79,26 @@
       <cat-item tags="vblex.ppst"/>
       <cat-item tags="vblex.ppst.*"/>
     </def-cat>
+    
     <def-cat n="num">
       <cat-item tags="num.*"/>
     </def-cat>
+    
     <def-cat n="infinitive">
       <cat-item tags="vblex.gen"/>
       <cat-item tags="vblex.gen.*"/>
       <cat-item tags="vblex.inf"/>
       <cat-item tags="vblex.inf.*"/>
     </def-cat>
+    
     <def-cat n="personal-pronoun">
       <cat-item lemma="prpers" tags="prn.*"/>
     </def-cat>
+    
+    <def-cat n="determiner">
+      <cat-item tags="det.*"/>
+    </def-cat>
+    
   </section-def-cats>
 
   <section-def-attrs>
@@ -585,6 +605,64 @@
               <clip pos="1" side="sl" part="a_pos"/>
               <clip pos="1" side="sl" part="a_nbr" link-to="2"/>
               <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+            
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <!-- এই দেশের প্রধান সমস্যা -->
+
+    <rule comment="REGLA: NOUN-GEN ADJ NOM">
+      <pattern>
+        <pattern-item n="determiner"/>
+        <pattern-item n="n-gen"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="n-nom"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="nom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="4" side="tl" part="a_nbr"/></tag>
+              <tag><lit-tag v="nom"/></tag>
+            </tags>
+            
+            <lu>
+              <clip pos="3" side="tl" part="whole"/>
+            </lu>
+            
+			<b/>
+            
+            <lu>
+              <clip pos="4" side="tl" part="lemh"/>
+              <clip pos="4" side="tl" part="a_pos"/>
+              <clip pos="4" side="tl" part="a_nbr" link-to="2"/>
+              <clip pos="4" side="tl" part="lemq"/>
+            </lu>
+            
+            <b/>
+            
+            <lu>
+              <lit v="of"/>
+              <lit-tag v="pr"/>
+            </lu>
+            
+            <b/>
+            
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+            
+            <b/>
+            
+            <lu>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="sl" part="a_pos"/>
+              <clip pos="2" side="sl" part="a_nbr" link-to="2"/>
+              <clip pos="2" side="tl" part="lemq"/>
             </lu>
             
           </chunk>
