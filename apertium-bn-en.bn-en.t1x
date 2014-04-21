@@ -206,6 +206,7 @@
     <def-var n="var_prpers"/>
     <def-var n="var_noun"/>
     <def-var n="var_proper_noun"/>
+    <def-var n="verb_attr"/>
   </section-def-vars>
   
   <section-def-macros>
@@ -438,6 +439,53 @@
           </chunk>
       </let>
     </def-macro>
+  
+    <!-- Insert walk(s), eat(s) for third person singular -->
+  	<def-macro n="fix_vblex_p3_sg" npar="2">
+  		<choose>
+  			<when>
+	 				<test>
+	  				<and>
+	  					<equal>
+	  						<clip pos="2" side="sl" part="a_temps_vbser"/>
+	  						<lit-tag v="pres"/>
+	  					</equal>
+	  					<equal>
+	  						<clip pos="1" side="sl" part="a_nbr"/>
+	  						<lit-tag v="sg"/>
+	  					</equal>
+	  					<or>
+	  						<equal>
+		  						<clip pos="1" side="sl" part="a_pers"/>
+		  						<lit-tag v="p3"/>
+		  					</equal>
+		  					<equal>
+		  						<clip pos="1" side="sl" part="a_pos"/>
+		  						<lit-tag v="np"/>
+		  					</equal>
+	  					</or>
+	  				</and>
+		  		</test>
+		  		<let>
+		  			<var n="verb_attr"/>
+		  			<concat>
+		  				<lit-tag v="p3"/>
+		  				<lit-tag v="sg"/>
+		  			</concat>
+		  		</let>
+		  		<let>
+		  			<clip pos="2" side="tl" part="a_temps_vbser"/>
+		  			<lit-tag v="pri"/>
+		  		</let>
+  			</when>
+  			<otherwise>
+  				<let>
+		  			<var n="verb_attr"/>
+		  			<lit v=""/>
+		  		</let>
+  			</otherwise>
+  		</choose>
+  	</def-macro>
   	
   </section-def-macros>
 
@@ -670,6 +718,47 @@
       </action>
     </rule>
     
+    <!-- আমি খাই, আলি হাঁটে -->
+    <!-- Change all pres/past simple to pres/past -->
+    <rule comment="VBLEX: NOM SIMPLE">
+      <pattern>
+        <pattern-item n="nom"/>
+        <pattern-item n="simple"/>
+      </pattern>
+      <action>
+      	
+        <call-macro n="out_nom">
+          <with-param pos="1"/>
+        </call-macro>
+      	
+        <call-macro n="fix_vblex_p3_sg">
+          <with-param pos="1"/>
+          <with-param pos="2"/>
+        </call-macro>
+        
+        <out>
+        	<var n="var_nom"/>
+        	
+        	<b/>
+        	
+          <chunk name="verb" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            
+            <lu>
+              <clip pos="2" side="tl" part="lemh"/>
+              <lit-tag v="vblex"/>
+              <clip pos="2" side="tl" part="a_temps_vbser"/>
+              <clip pos="2" side="tl" part="lemq"/>
+              <var n="verb_attr"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    
+    <!-- খাই, হাঁটে -->
     <!-- Change all pres/past simple to pres/past -->
     <rule comment="VBLEX: SIMPLE">
       <pattern>
